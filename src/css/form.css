@@ -1,0 +1,29 @@
+input, textarea {
+  width: 240px;
+  font-size: 16px;
+  padding: 5px 6px;
+}
+
+input {
+  /* height: 30px; */
+
+}
+
+textarea {
+  margin-top: 10px;
+  height: 80px;
+}
+
+button {
+  background: #E1DEE3;
+  margin : 20px auto;
+  width : 100px;
+  height : 40px;
+  overflow: hidden;
+  text-align : center;
+  transition : .2s;
+  cursor : pointer;
+  border-radius: 3px;
+  box-shadow: 0px 1px 2px;
+  font-size: 14px;
+}

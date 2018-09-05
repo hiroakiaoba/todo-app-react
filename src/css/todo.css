@@ -1,0 +1,30 @@
+.btn {
+  text-decoration: none;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.undone, .done {
+  /* font-size:120%; */
+  color:#313131;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border:1px solid #313131;
+  border-radius: 5px;
+  letter-spacing: 3px;
+  width: 60%;
+  /* font-weight:400; */
+}
+
+.todo-title {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+a {
+  color: #708090;
+}

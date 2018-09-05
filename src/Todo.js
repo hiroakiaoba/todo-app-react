@@ -9,15 +9,15 @@ class Todo extends Component {
     const id = this.props.done ? '' : this.props.id;
     const title = this.props.done ? '' : this.props.title;
     const desc = this.props.done ? '' : this.props.desc;
-    const deleteButton = this.props.done ? <button>削除</button> : '';
+    const deleteButton = this.props.done ? '削除' : '';
     return (
-      <li className={className}>
-        <span>{id}</span>
-        <span>{title} </span>
-        <a href="" onClick={(e) => { e.preventDefault(); this.props.setTodoStatus(this.props) }}>{link}</a>
-        {deleteButton}
+      <div className={className}>
+        <span>{id}  </span>
+        <span className="todo-title">{title} </span>
+        <a className="btn" href="" onClick={(e) => { e.preventDefault(); this.props.setTodoStatus(this.props) }}>{link}</a>
+        <a className="btn" href="" onClick={(e) => { e.preventDefault(); this.props.deleteTodo(this.props)}}>{deleteButton}</a>
         <p>{desc}</p>
-      </li>
+      </div>
     );
   }
 }

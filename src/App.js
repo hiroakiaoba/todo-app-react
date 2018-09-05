@@ -56,12 +56,22 @@ class App extends Component {
     this.setState({ todos });
   }
 
+  deleteTodo(clickTodo) {
+    const todos = this.state.todos.slice();
+    todos.splice(clickTodo.id - 1, 1);
+    this.setState({ todos });
+  }
+
   render() {
     return (
       <div className="app">
-        <h1>ReactでToDoアプリ！</h1>
-        <Form handleSubmit={this.handleSubmit.bind(this)} />
-        <TodoList todos={this.state.todos} setTodoStatus={this.setTodoStatus.bind(this)} />
+        <header>
+          <h1>ReactでToDoアプリ！</h1>
+        </header>
+        <div className="main-container">
+          <Form handleSubmit={this.handleSubmit.bind(this)} />
+          <TodoList todos={this.state.todos} setTodoStatus={this.setTodoStatus.bind(this)} deleteTodo={this.deleteTodo.bind(this)} />
+        </div>
       </div>
     )
   }

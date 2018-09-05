@@ -1,0 +1,25 @@
+body {
+  font: 16px/1.6 "Hiragino Kaku Gothic Pro",Osaka,"メイリオ","ＭＳ Ｐゴシック","MS PGothic",Verdana,Arial,sans-serif;
+  margin:0;
+  color:#313131;
+}
+
+header {
+  display: block;
+  overflow: hidden;
+  background-color: #E1DEE3;
+  height: 120px;
+}
+
+header h1 {
+  margin-left: 5%;
+  line-height: 300%;
+  color: #313131;
+  font-weight: 600;
+  text-shadow: 5px 5px 1px #999999;
+}
+
+.main-container {
+  margin-left: 5%;
+  margin-top: 20px;
+}
