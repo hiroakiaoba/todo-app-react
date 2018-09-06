@@ -4,6 +4,7 @@ import Form from './Form';
 import './css/index.css';
 
 class App extends Component {
+
   constructor() {
     super()
     const todos = [
@@ -24,6 +25,9 @@ class App extends Component {
       todos: todos,
       countTodo: todos.length + 1
     }
+    this.handleSubmit = this.handleSubmit.bind(this);
+    this.setTodoStatus = this.setTodoStatus.bind(this);
+    this.deleteTodo = this.deleteTodo.bind(this)
   }
 
   handleSubmit(e) {
@@ -69,8 +73,8 @@ class App extends Component {
           <h1>ReactでToDoアプリ！</h1>
         </header>
         <div className="main-container">
-          <Form handleSubmit={this.handleSubmit.bind(this)} />
-          <TodoList todos={this.state.todos} setTodoStatus={this.setTodoStatus.bind(this)} deleteTodo={this.deleteTodo.bind(this)} />
+          <Form handleSubmit={this.handleSubmit} />
+          <TodoList todos={this.state.todos} setTodoStatus={this.setTodoStatus} deleteTodo={this.deleteTodo} />
         </div>
       </div>
     )
